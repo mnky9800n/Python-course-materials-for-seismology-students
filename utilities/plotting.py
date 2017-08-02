@@ -75,7 +75,7 @@ def shoot(lon, lat, azimuth, maxdist=None):
  
     return (glon2, glat2, baz)
  
-def equi(m, centerlon, centerlat, radius, *args, **kwargs):
+def equi(ax, m, centerlon, centerlat, radius, *args, **kwargs):
     # TODO : pick a better name
     """
     plots circle on matplotlib basemap map
@@ -107,7 +107,7 @@ def equi(m, centerlon, centerlat, radius, *args, **kwargs):
     Y.append(Y[0])
  
     X,Y = m(X,Y)
-    plt.plot(X,Y,**kwargs)
+    ax.plot(X,Y,**kwargs)
 
 def plot_circle_on_map(m, centerlon, centerlat, radius, **kwargs):
     """
