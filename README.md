@@ -1,4 +1,4 @@
-# Python for Scientists
+# Seismology Tools
 This is a collection of notebooks for a python short course for scientists. These notebooks are designed to be useful both in class and to students outside of class. Any suggestions for making them better is helpful.
 
 The learning goals for these notebooks are:
