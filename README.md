@@ -11,8 +11,6 @@ The learning goals for these notebooks are:
 6. Students should be comfortable with jupyter notebooks
 7. Students should be able to perform "exploratory data analysis" and generate a hypothesis from it
 
-Some notebooks may come originally from https://github.com/jvns/pandas-cookbook but have been altered for this course.
-
 # Getting started
 To get started we recommend using Anaconda: https://www.continuum.io/downloads
 
