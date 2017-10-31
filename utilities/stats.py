@@ -15,8 +15,8 @@ def mc_maximum_curvature(magnitudes):
 
     citation: ???
 
-    :param catalog : pandas Series
-    :param method : string
+    :param catalog : pandas.Series
+    :param method : str
     """
 
     minimum = round(magnitudes.min(), 2)
@@ -31,12 +31,9 @@ def fmd_values(magnitudes, bin_width=0.1):
     """
     returns a,b,bstd, n-values
 
-    :param magnitudes:
-    :type magnitudes:
-    :param bin_width:
-    :type bin_width:
-    :return:
-    :rtype:
+    magnitudes : np.ndarray
+    bin_width : float
+    return : list
     """
 
 
@@ -123,7 +120,6 @@ def get_catalog_shifted_by_location_normal_error(df):
     :return: shifted catalog dataframe
     :rtype: pandas.dataframe
     """
-    # TODO: this should be moved to polygon_selection
     err_df = df.copy()
     err_df['hz_err_deg'] = err_df['horizontal_error'] / 111.113
     err_df['lon'] = np.random.normal(err_df['lon'].values, err_df['hz_err_deg'].values+0.001)
@@ -134,8 +130,13 @@ def get_catalog_shifted_by_location_normal_error(df):
 def calculate_b_value_parameter_sweep(dataframe, location, n_iterations, parameters):
     """
     calculates grid search data for fmd statistics
+
+    dataframe : pandas.DataFrame
+    location : list
+    n_iterations : int
+    parameters : list
+    return : pandas.DataFrame    
     """
-    # TODO: this is probably too specific for here
     rows = []
     for r, t in parameters:
         raw_df = dataframe.loc[dataframe.index >= t].copy()

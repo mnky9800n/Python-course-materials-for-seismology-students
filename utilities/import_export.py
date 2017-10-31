@@ -6,6 +6,10 @@ def import_catalog(location, timestamp_column='decimal_year', **kwargs):
     imports column names and returns dataframe with timestamp index
     
     accepts kwargs for pandas.read_csv
+
+    location : ?
+    timestamp_column : str
+    kwargs : pandas.read_csv kwargs
     """
     # TODO : provide ability to parse header files
     timestamp_conversion = {'decimal_year':timestamps.convert_decimal_year_to_numpy_datetime64
@@ -24,16 +28,7 @@ def export_catalog(dataframe, **kwargs):
     """
     exports data as csv
 
-
-    :param dataframe: pandas.DataFrame
-    :type dataframe: pandas.DataFrame
-    :param kwargs: any arguments to pass to to_csv function
-    :type kwargs:
-    :return: None
-    :rtype: None
+    dataframe : pandas.DataFrame
+    kwargs : pandas.DataFrame.to_csv kwargs
     """
     dataframe.to_csv(**kwargs)
-
-def parse_catalog_meta_information():
-    # TODO : implement
-    pass
