@@ -3,6 +3,11 @@ def shoot(lon, lat, azimuth, maxdist=None):
     """Shooter Function
     Original javascript on http://williams.best.vwh.net/gccalc.htm
     Translated to python by Thomas Lecocq
+
+    lon : float
+    lat : float
+    azimuth : float
+    return : list
     """
     glat1 = lat * np.pi / 180.
     glon1 = lon * np.pi / 180.
@@ -67,24 +72,17 @@ def shoot(lon, lat, azimuth, maxdist=None):
     return (glon2, glat2, baz)
  
 def equi(ax, m, centerlon, centerlat, radius, *args, **kwargs):
-    # TODO : pick a better name
     """
     plots circle on matplotlib basemap map
 
-    :param m:
-    :type m:
-    :param centerlon:
-    :type centerlon:
-    :param centerlat:
-    :type centerlat:
-    :param radius:
-    :type radius:
-    :param args:
-    :type args:
-    :param kwargs:
-    :type kwargs:
-    :return:
-    :rtype:
+    m : mpl_toolkits.Basemap
+    centerlon : float
+    centerlat : float
+    centerlat : float
+    radius : float
+    type args : args for matplotlib.Axes
+    type kwargs : kwargs for matplotlib.Axes
+    return: None
     """
     glon1 = centerlon
     glat1 = centerlat
@@ -103,19 +101,13 @@ def equi(ax, m, centerlon, centerlat, radius, *args, **kwargs):
 def plot_circle_on_map(m, centerlon, centerlat, radius, **kwargs):
     """
     Wrapper for equi
-
-    :param m:
-    :type m:
-    :param centerlon:
-    :type centerlon:
-    :param centerlat:
-    :type centerlat:
-    :param radius:
-    :type radius:
-    :param kwargs:
-    :type kwargs:
-    :return:
-    :rtype:
+    
+    m : mpl_toolkits.Basemap
+    centerlon : float
+    centerlat : float
+    radius : float
+    kwargs : axis kwargs
+    return : equi
     """
     return equi(m, centerlon, centerlat, radius, **kwargs)
 
@@ -123,20 +115,13 @@ def plot_line_on_map(m, point_1, point_2, s=5, l=5, color='red'):
     """
     plots line on matplotlib basemap map
 
-    :param m:
-    :type m:
-    :param point_1:
-    :type point_1:
-    :param point_2:
-    :type point_2:
-    :param s:
-    :type s:
-    :param l:
-    :type l:
-    :param color:
-    :type color:
-    :return:
-    :rtype:
+    m : mpl_toolkits.Basemap
+    point_1 : list
+    point_2 : list
+    s : float
+    l : float
+    color : str
+    return : None
     """
     x = (point_1[0], point_2[0])
     y = (point_1[1], point_2[1])
@@ -147,38 +132,25 @@ def plot_text_on_map(m, ax, lat, lon, text, fontsize=15):
     """
     plots text on matplotlib basemap map
 
-    :param m:
-    :type m:
-    :param ax:
-    :type ax:
-    :param lat:
-    :type lat:
-    :param lon:
-    :type lon:
-    :param text:
-    :type text:
-    :param fontsize:
-    :type fontsize:
-    :return:
-    :rtype:
+    m : mpl_toolkits.Basemap
+    ax : mpl figure axes
+    lat : float
+    lon : float
+    text : str
+    fontsize : int
     """
     x, y = m(lon, lat)
     ax.text(s=text, x=x, y=y, fontsize=fontsize)
 
-def draw_screen_poly( lats, lons, m, ax):
+def draw_screen_poly(lats, lons, m, ax):
     """
     draws polygon on matplotlib basemap map
 
-    :param lats:
-    :type lats:
-    :param lons:
-    :type lons:
-    :param m:
-    :type m:
-    :param ax:
-    :type ax:
-    :return:
-    :rtype:
+    lats : list
+    lons : list
+    m : mpl_toolkits.Basemap
+    ax : mpl figure axes
+    return : None
     """
     x, y = m( lons, lats )
     xy = zip(x,y)
@@ -196,7 +168,9 @@ def plot_seismicity_map(dataframe, lon_lat_min_max=None, **kwargs):
     Fails on catalogs with >1 million events
     (perhaps smaller).
     
-    
+    dataframe : pandas.DataFrame
+    lon_lat_min_max : list
+    kwargs : figure axes kwargs
     """
     df = dataframe.copy()
     if lon_lat_min_max is None:

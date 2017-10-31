@@ -8,6 +8,9 @@ def convert_decimal_year_to_numpy_datetime64(decimal_year):
     Convert the weird decimal year format of ZMAP origin to datetime64
     
     Assumes UTC
+
+    decimal_year : float
+    return : numpy.datetime64
     """
     # get year = integer fraction of decimal_year
     # NOTE: if decimal year is very close to the next higher integer value,
@@ -29,6 +32,9 @@ def convert_epoch_to_numpy_datetime64(epoch_time):
     Convert epoch time to numpy.datetime64
     
     Assumes UTC
+    epoch time
+
+    this doesn't work
     """
     dt = datetime.datetime.fromtimestamp(ts).replace(tzinfo=tz.tzutc())
     return np.datetime64(dt)
@@ -38,6 +44,7 @@ def convert_multiple_column_timestamp_to_numpy_datetime64(ts, precision='[s]'):
     Converts multiple column timestamp to single numpy.datetime64 column
     
     precision takes any numpy.datetime64 precision operator
+
     """
     ts = ts.astype(np.float64)
     ts[np.isnan(ts)] = 0
@@ -51,4 +58,4 @@ def convert_multiple_column_timestamp_to_numpy_datetime64(ts, precision='[s]'):
     if hr > 23:
         print(hr)
     dt = datetime.datetime(year=yr, month=mo, day=dy, hour=hr, minute=mi, second=sc)
-    return np.datetime64(dt, utc=True).astype('datetime64{p}'.format(p=precision))#.astype(str)
+    return np.datetime64(dt, utc=True).astype('datetime64{p}'.format(p=precision))

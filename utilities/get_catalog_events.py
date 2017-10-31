@@ -7,6 +7,9 @@ from scipy import spatial
 def cartesian_distance_between_two_three_vectors(vector_a, vector_b):
     """
     Calculates cartesian distance between two 3d points
+    vector_a : numpy.ndarray
+    vector_b : numpy.ndarray
+    return : numpy.ndarray
     """
     dist = spatial.distance.cdist([vector_a], [vector_b])
     return dist
@@ -18,6 +21,11 @@ def distance_between_two_coordinates(lat_a, lon_a, lat_b, lon_b):
     accurate up to 200km distances
     
     returns single LON/LAT vector difference
+    lat_a : float
+    lon_a : float
+    lat_b : float
+    lon_b : float
+    return : float
     """
     lat_diff = lat_a - lat_b
     lon_diff = lon_a - lon_b
@@ -32,6 +40,12 @@ def distance_between_two_coordinates(lat_a, lon_a, lat_b, lon_b):
 def get_node_data(node, radius, data, m):
     """
     returns data within a circle with given radius
+
+    node : list
+    radius : float
+    data : pandas.DataFrame
+    m : mpl_toolkits.Basemap
+    return : pandas.DataFrame
     """
     node_lon = node[0]
     node_lat = node[1]
