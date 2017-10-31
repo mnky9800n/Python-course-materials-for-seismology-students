@@ -1,10 +1,10 @@
 # Example Notebooks
 
-This folder contains example notebooks for basic types and programming in python, doing basic tasks using Pandas, generating graphs, and making maps. These notebooks are designed to be integrated into a geoscience course that has python projects. These notebooks are designed with the following learning goals in mind:
+This folder contains example notebooks for basic types and programming in Python, doing basic tasks using Pandas, generating graphs, and making maps. These notebooks are designed to be integrated into a geoscience course that has Python projects. These notebooks are designed with the following learning goals in mind:
 
 1. Students should feel comfortable with standard data types in Python (list, string, float, int, dict, etc).
 2. Students should be able to import data and export data using Pandas.
-3. Students should be able to make plots in Python that have horizontal and vertical axes of different datas.
+3. Students should be able to make plots in Python that have horizontal and vertical axes of different data.
 4. Students should be able to manipulate histograms in Python and create visualizations of histograms.
 5. Students should be able to make maps in Python that include data such as points and heat maps.
 6. Students should be able to perform "exploratory data analysis" and generate a hypothesis from it.
