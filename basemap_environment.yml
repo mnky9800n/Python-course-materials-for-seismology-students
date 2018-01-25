@@ -38,6 +38,7 @@ dependencies:
 - nbformat=4.4.0=py36_0
 - ncurses=5.9=10
 - notebook=5.1.0=py36_0
+- obspy
 - openssl=1.0.2l=0
 - pandas=0.20.3=py36_1
 - pandoc=1.19.2=0
