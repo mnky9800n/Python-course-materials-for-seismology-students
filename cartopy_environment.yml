@@ -6,7 +6,6 @@ channels:
 - conda-forge
 - defaults
 dependencies:
-- appnope=0.1.0=py36_0
 - asn1crypto=0.22.0=py36_0
 - blas=1.1=openblas
 - bleach=2.0.0=py36_0
@@ -79,8 +78,8 @@ dependencies:
 - python=3.6.2=0
 - python-dateutil=2.6.1=py36_0
 - pytz=2017.2=py36_0
-- pyzmq=16.0.2=py36_2
-- qt=5.6.2=h9e3eb04_4
+- pyzmq=16.0.2
+- qt=5.6.2
 - qtconsole=4.3.1=py36_0
 - readline=6.2=0
 - requests=2.18.4=py36_1
@@ -99,7 +98,7 @@ dependencies:
 - urllib3=1.22=py36_0
 - wcwidth=0.1.7=py36_0
 - webencodings=0.5=py36_0
-- wheel=0.30.0=py_1
+- wheel=0.30.0
 - widgetsnbextension=2.0.1=py36_0
 - xz=5.2.3=0
 - zeromq=4.2.1=1
