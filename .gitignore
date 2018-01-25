@@ -1,1 +1,7 @@
 *.asc
+*.prj
+.ipynb_checkpoints
+.DS_Store
+
+*/.ipynb_checkpoints/*
+/example_notebooks/data/gdpga/

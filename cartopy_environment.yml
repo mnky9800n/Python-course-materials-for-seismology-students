@@ -52,6 +52,7 @@ dependencies:
 - ncurses=5.9=10
 - notebook=5.1.0=py36_0
 - numpy=1.13.1=py36_blas_openblas_200
+- obspy
 - olefile=0.44=py36_0
 - openblas=0.2.19=2
 - openssl=1.0.2l=0
