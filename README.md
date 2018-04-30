@@ -26,5 +26,5 @@ The environment.yml file is provided to install all of the dependencies required
 
 Note: if you have trouble installing shapely please try [this](https://anaconda.org/scitools/shapely)
 
-## Please cite and read our article about this collection of notebooks!
+## Please cite our article about this collection of notebooks if you use them in your teaching or research
 John M. Aiken, Chastity Aiken, Fabrice Cotton; A Python Library for Teaching Computation to Seismology Students. Seismological Research Letters ; 89 (3): 1165–1171. doi: https://doi.org/10.1785/0220170246
