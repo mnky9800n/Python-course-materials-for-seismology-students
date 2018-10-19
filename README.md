@@ -12,7 +12,7 @@ The learning goals for these notebooks are:
 7. Students should be able to perform "exploratory data analysis" and generate a hypothesis from it
 
 # Getting started
-To get started we recommend using Anaconda: https://www.continuum.io/downloads
+To get started we recommend using Anaconda: https://www.anaconda.com/download/
 
 The environment.yml file is provided to install all of the dependencies required for these notebooks.
 
