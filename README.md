@@ -18,7 +18,7 @@ The environment.yml file is provided to install all of the dependencies required
 
 ## Steps to getting started
 
-1. Download Anaconda (we recommend python 3.5 version, 64-bit): https://www.continuum.io/downloads
+1. Download Anaconda (we recommend python 3.X version, 64-bit): https://www.continuum.io/downloads
 2. Follow installation instructions for anaconda
 3. create your new environment `conda env create -f environment.yml` : http://conda.pydata.org/docs/using/envs.html#create-a-separate-environment
 4. activate the environment
